@@ -20,10 +20,12 @@ const Layout = ({ pageTitle, children }) => {
     }
   `);
   return (
-    <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul className={navLinks}>
+    <div className="p-6 flex flex-col justify-center items-center text-center bg-red-200">
+      <header className="font-bold text-5xl text-blue-600">
+        {data.site.siteMetadata.title}
+      </header>
+      <nav className="py-4">
+        <ul className="flex">
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
               Home
@@ -42,7 +44,7 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1 className="text-red-400 text-5xl py-4">{pageTitle}</h1>
         {children}
       </main>
     </div>
